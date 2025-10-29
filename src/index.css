@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Semi-dark base palette (site-wide) */
+    --background: 220 14% 12%; /* deep charcoal-navy */
+    --foreground: 210 40% 96%; /* near-white for text on dark bg */
+
+    --card: 220 12% 16%; /* slightly lighter surface for cards */
+    --card-foreground: 210 40% 96%;
+
+    --popover: 220 12% 14%;
+    --popover-foreground: 210 40% 96%;
+
+    /* Make primary a warm gold to match the luxury theme */
+    --primary: 45 95% 54%;
+    --primary-foreground: 220 14% 12%;
+    --primary-glow: 45 95% 64%;
+
+    --secondary: 262 52% 47%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 12% 18%;
+    --muted-foreground: 210 40% 76%;
+
+    --accent: 173 80% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 12% 18%;
+    --input: 220 12% 16%;
+    --ring: 45 95% 54%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(45 95% 54%), hsl(38 92% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(262 52% 47%), hsl(283 60% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(173 80% 40%), hsl(193 82% 45%));
+    --gradient-hero: linear-gradient(180deg, hsl(220 14% 12%), hsl(220 12% 16%));
+
+    --shadow-elegant: 0 10px 40px -10px hsl(45 95% 54% / 0.15);
+    --shadow-hover: 0 20px 50px -15px hsl(45 95% 54% / 0.18);
+    --shadow-glow: 0 0 60px hsl(45 95% 64% / 0.15);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Luxury / gold accents */
+    --luxury-gold: 45 95% 54%; /* H S L for gold */
+    --luxury-gold-2: 38 92% 60%;
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--luxury-gold)), hsl(var(--luxury-gold-2)));
+    --shadow-gold: 0 12px 40px -10px hsl(var(--luxury-gold) / 0.25);
+  }
+
+  /* Accent palettes for other sections */
+  :root {
+    --maroon: 350 65% 28%;
+    --emerald: 150 60% 30%;
+    --crystal-teal: 178 65% 35%;
+    --egyptian-blue: 210 65% 46%;
+
+    --grad-maroon: linear-gradient(135deg, hsl(var(--maroon)), hsl(345 60% 40%));
+    --grad-emerald: linear-gradient(135deg, hsl(var(--emerald)), hsl(145 58% 36%));
+    --grad-teal: linear-gradient(135deg, hsl(var(--crystal-teal)), hsl(185 68% 42%));
+    --grad-egyptian: linear-gradient(135deg, hsl(var(--egyptian-blue)), hsl(200 70% 50%));
+  }
+
+  .dark {
+    --background: 222 47% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 221 83% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 221 83% 70%;
+
+    --secondary: 262 52% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 173 80% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 221 83% 60%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 50%), hsl(262 52% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(262 52% 45%), hsl(283 60% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(173 80% 35%), hsl(193 82% 40%));
+    --gradient-hero: linear-gradient(180deg, hsl(222 47% 7%), hsl(222 47% 10%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
