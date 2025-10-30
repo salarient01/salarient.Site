@@ -1,7 +1,9 @@
 import React from "react";
 import { Headphones, FileText, ShieldCheck, Cpu, ArrowRight } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 export default function ServicesHighlight() {
+  const location = useLocation();
   return (
     <section className="py-16 bg-[#040412] text-white">
       <div className="container mx-auto px-4">
@@ -87,11 +89,13 @@ export default function ServicesHighlight() {
           </div>
         </div>
 
-        <div className="mt-8 text-center">
-          <a href="/services" className="inline-flex items-center gap-2 rounded-md bg-gradient-to-br from-amber-400 to-yellow-400 px-5 py-3 text-slate-900 font-semibold shadow-[0_12px_40px_-10px_rgba(250,204,21,0.25)]">
-            Explore our services <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
+        {location.pathname !== "/services" && (
+          <div className="mt-8 text-center">
+            <a href="/services" className="inline-flex items-center gap-2 rounded-md bg-gradient-to-br from-amber-400 to-yellow-400 px-5 py-3 text-slate-900 font-semibold shadow-[0_12px_40px_-10px_rgba(250,204,21,0.25)]">
+              Explore our services <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

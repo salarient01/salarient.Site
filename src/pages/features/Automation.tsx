@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
-import ServicesHighlight from "@/components/ServicesHighlight";
+import ServicesSnippet from "@/components/ServicesSnippet";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Zap, Clock, CheckCircle2, TrendingUp, Bot, Sparkles } from "lucide-react";
@@ -210,7 +210,7 @@ const Automation = () => {
         </div>
       </section>
 
-  <ServicesHighlight />
+  <ServicesSnippet />
 
   <section className="py-20 bg-grape-800 text-white">
         <div className="container mx-auto px-4 text-center">

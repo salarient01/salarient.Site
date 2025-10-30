@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import ServicesSnippet from "@/components/ServicesSnippet";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, FileCheck, AlertCircle, CheckCircle2, Scale, Lock } from "lucide-react";
@@ -225,6 +226,8 @@ const Compliance = () => {
           </div>
         </div>
       </section>
+
+  <ServicesSnippet />
 
   <section className="py-20 bg-grape-800 text-white">
         <div className="container mx-auto px-4 text-center">

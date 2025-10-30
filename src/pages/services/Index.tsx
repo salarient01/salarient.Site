@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ServicesHighlight from "@/components/ServicesHighlight";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 
@@ -53,7 +54,6 @@ const Services = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Navbar />
-
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -68,6 +68,8 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      {/* Contact intro moved back to Contact page */}
 
       <section className="py-12">
         <div className="container mx-auto px-4">
@@ -95,9 +97,11 @@ const Services = () => {
             ))}
           </div>
         </div>
-      </section>
+  </section>
 
-      <section className="py-12">
+  <ServicesHighlight />
+
+  <section className="py-12">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to get started?</h2>
           <p className="text-muted-foreground mb-6">Learn more or contact our sales team to discuss a custom plan.</p>
