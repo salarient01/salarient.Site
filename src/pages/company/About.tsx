@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import ServicesHighlight from "@/components/ServicesHighlight";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Users, Award, TrendingUp } from "lucide-react";
 
@@ -120,6 +121,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <ServicesHighlight />
 
       <Footer />
     </div>

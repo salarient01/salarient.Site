@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import ServicesHighlight from "@/components/ServicesHighlight";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -86,6 +87,36 @@ const Contact = () => {
                   Interested in SALARIENT HR solutions for your business? Our sales team is ready to help you 
                   find the perfect solution.
                 </p>
+                <div className="space-y-4 text-sm text-muted-foreground mb-4">
+                  <div>
+                    <h4 className="font-semibold mb-2">Attendance tracking</h4>
+                    <p>
+                      Real-time integration with biometric or any attendance capturing device, support for multiple shifts, easy shift rostering by line managers, configurable penalties for unauthorized absence / late-in / early-out / shortfall, flexi-hours support, and selfie attendance marking.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold mb-2">Exit management</h4>
+                    <p>
+                      Online resignation application & approval, customizable multi-department clearance workflows, an exit dashboard for visibility, and integration with full-final settlement processes.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold mb-2">Employee onboarding</h4>
+                    <p>
+                      Streamlined onboarding workflows, admin review steps, alerts and reminders for employees and admins, and electronic acceptance of company policies to ensure a fast, compliant new-hire experience.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold mb-2">Help desk</h4>
+                    <p>
+                      Define ticket categories, create and resolve tickets, SLA-driven queues and escalation, and reporting to ensure timely response and operational continuity.
+                    </p>
+                  </div>
+                </div>
+
                 <Button className="w-full">Schedule a Demo</Button>
               </div>
             </div>
@@ -142,6 +173,8 @@ const Contact = () => {
           </Button>
         </div>
       </section>
+
+      <ServicesHighlight />
 
       <Footer />
     </div>

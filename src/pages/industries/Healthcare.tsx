@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Shield, Clock, FileText } from "lucide-react";
 
@@ -159,9 +160,11 @@ const Healthcare = () => {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Focus on patient care, not payroll complexity
           </p>
-          <Button size="lg" variant="secondary">
-            Request Demo
-          </Button>
+          <Link to="/features/compliance">
+            <Button size="lg" variant="secondary">
+              Learn more
+            </Button>
+          </Link>
         </div>
       </section>
 

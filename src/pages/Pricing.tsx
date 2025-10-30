@@ -25,97 +25,139 @@ const Pricing = () => {
 
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                name: "Starter",
-                price: "$39",
-                period: "per month + $6/employee",
-                description: "Perfect for small businesses just getting started",
-                features: [
-                  "Unlimited payroll runs",
-                  "Direct deposit",
-                  "Tax filing and payments",
-                  "Employee self-service",
-                  "Basic reporting",
-                  "Email support",
-                ],
-                cta: "Explore our services",
-                popular: false,
-              },
-              {
-                name: "Professional",
-                price: "$79",
-                period: "per month + $8/employee",
-                description: "For growing businesses with advanced needs",
-                features: [
-                  "Everything in Starter",
-                  "Time & attendance",
-                  "HR management",
-                  "Benefits administration",
-                  "Advanced reporting",
-                  "Priority phone support",
-                  "API access",
-                  "Custom integrations",
-                ],
-                cta: "Explore our services",
-                popular: true,
-              },
-              {
-                name: "Enterprise",
-                price: "Custom",
-                period: "pricing",
-                description: "For large organizations with complex requirements",
-                features: [
-                  "Everything in Professional",
-                  "Dedicated account manager",
-                  "Custom workflows",
-                  "SLA guarantees",
-                  "Advanced security features",
-                  "Onboarding & training",
-                  "24/7 priority support",
-                  "White-glove implementation",
-                ],
-                cta: "Contact Sales",
-                popular: false,
-              },
-            ].map((plan, index) => (
-              <Card key={index} className={plan.popular ? "border-primary shadow-elegant" : ""}>
-                <CardContent className="p-8">
-                  {plan.popular && (
-                    <div className="bg-primary text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-                      Most Popular
-                    </div>
-                  )}
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-muted-foreground ml-2">{plan.period}</span>
+              {/* Basic Plan section - elevated copy */}
+              <div className="mt-0 max-w-4xl mx-auto bg-[#0b0b10] p-8 rounded-2xl border border-white/6">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-serif font-extrabold">Basic Plan — ₹3,000 / month</h3>
+                  <div className="text-sm text-muted-foreground mt-2">Up to 30 employees</div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">Employee Communication</h4>
+                    <p className="text-sm text-muted-foreground">Mass communication via email and SMS, social feed-style employee messaging, group targeting, automated reminders and alerts, and configurable notifications to keep your workforce informed and engaged.</p>
+
+                    <h4 className="text-lg font-semibold mt-4 mb-2">Payroll</h4>
+                    <p className="text-sm text-muted-foreground">Flexible salary configurations, multiple pay structures, payroll inputs and processing, payslip generation and secure distribution (PDF/email), comprehensive payroll reporting, and bank transfer letters.</p>
                   </div>
-                  <p className="text-muted-foreground mb-6">{plan.description}</p>
-                  {plan.cta === "Explore our services" ? (
-                    <Link to="/services">
-                      <Button className={`w-full mb-6`} variant={plan.popular ? "default" : "outline"}>
-                        {plan.cta}
-                      </Button>
-                    </Link>
-                  ) : (
-                    <Button className={`w-full mb-6`} variant={plan.popular ? "default" : "outline"}>
-                      {plan.cta}
-                    </Button>
-                  )}
-                  <ul className="space-y-3">
-                    {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start">
-                        <Check className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">Statutory Compliance</h4>
+                    <p className="text-sm text-muted-foreground">Built-in statutory calculations (PF with ECR, ESI, Professional Tax per state rules), labour welfare fund handling, robust TDS computations, and digitally signed Form 16 / Form 24Q support for simplified statutory filing.</p>
+
+                    <h4 className="text-lg font-semibold mt-4 mb-2">Leave & Attendance</h4>
+                    <p className="text-sm text-muted-foreground">Multiple leave types and policies, location-based holiday calendars, flexible shift support, mobile and online attendance, manager rostering, and configurable rules for late/early/absent handling including flex-hours support.</p>
+                  </div>
+                </div>
+
+                <div className="mt-6">
+                  <h4 className="text-lg font-semibold mb-2">Helpdesk & Support</h4>
+                  <p className="text-sm text-muted-foreground">Ticket categories, SLA-driven ticketing, queue management, and resolution workflows backed by our support team to ensure timely response and operational continuity.</p>
+                </div>
+
+                <div className="mt-6 text-center">
+                  <Link to="/company/contact">
+                    <Button className="bg-gradient-to-br from-amber-400 to-yellow-400 text-slate-900 px-5 py-2 font-semibold">Get Basic Plan</Button>
+                  </Link>
+                </div>
+              </div>
+
+              
+
+              {/* Premium Plan section */}
+              <div className="mt-8 max-w-4xl mx-auto bg-[#06060a] p-8 rounded-2xl border border-white/6">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-serif font-extrabold">Premium Plan — ₹6,000 / month</h3>
+                  <div className="text-sm text-muted-foreground mt-2">Up to 30 employees</div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">Employee Information Management</h4>
+                    <p className="text-sm text-muted-foreground">A comprehensive employee system of record with 100+ data points, reporting hierarchy and org charts, employee directory, HR & CXO dashboards, and asset tracking.</p>
+
+                    <h4 className="text-lg font-semibold mt-4 mb-2">Employee Communication</h4>
+                    <p className="text-sm text-muted-foreground">Mass communication via email/SMS, social feedboard messaging, group-wise targeting, reminders, and configurable notifications to keep teams aligned.</p>
+
+                    <h4 className="text-lg font-semibold mt-4 mb-2">Company Policies</h4>
+                    <p className="text-sm text-muted-foreground">Publish company policies, employee handbook, common forms and templates with group-level targeting for controlled distribution.</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">Payroll</h4>
+                    <p className="text-sm text-muted-foreground">Configurable salary structures, multiple payroll inputs, payslip generation/distribution (PDF/email), comprehensive reporting, and bank transfer letters.</p>
+
+                    <h4 className="text-lg font-semibold mt-4 mb-2">Statutory Compliance</h4>
+                    <p className="text-sm text-muted-foreground">PF (with ECR), ESI, Professional Tax (state rules), labour welfare fund handling, TDS computations, digitally signed Form 16 and Form 24Q generation, and bonus reporting.</p>
+
+                    <h4 className="text-lg font-semibold mt-4 mb-2">Leave & Attendance</h4>
+                    <p className="text-sm text-muted-foreground">Real-time biometric/device integrations, multi-shift support, manager rostering, flexible work rules, selfie attendance, and configurable penalties for exceptions.</p>
+                  </div>
+                </div>
+
+                <div className="mt-6">
+                  <h4 className="text-lg font-semibold mb-2">Exit Management</h4>
+                  <p className="text-sm text-muted-foreground">Online resignation workflows with multi-department clearance, configurable exit approvals, exit dashboards, and integration with full-final settlement processes.</p>
+                </div>
+
+                <div className="mt-6 text-center">
+                  <Link to="/company/contact">
+                    <Button className="bg-gradient-to-br from-amber-400 to-yellow-400 text-slate-900 px-5 py-2 font-semibold">Get Premium Plan</Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Popular Plan section */}
+              <div className="mt-8 max-w-4xl mx-auto bg-[#0b0710] p-8 rounded-2xl border border-white/6">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-serif font-extrabold">Popular Plan — ₹4,500 / month</h3>
+                  <div className="text-sm text-muted-foreground mt-2">Up to 30 employees</div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">Employee Information Management</h4>
+                    <p className="text-sm text-muted-foreground">Comprehensive employee system of record with 100+ data points, reporting hierarchy and org charts, employee directory, HR & CXO dashboards, and asset tracking.</p>
+
+                    <h4 className="text-lg font-semibold mt-4 mb-2">Employee Communication</h4>
+                    <p className="text-sm text-muted-foreground">Mass communication via email/SMS, social feedboard messaging, group-wise targeting, reminders, and configurable notifications to keep teams aligned.</p>
+
+                    <h4 className="text-lg font-semibold mt-4 mb-2">Company Policies</h4>
+                    <p className="text-sm text-muted-foreground">Publish company policies, employee handbook, common forms and templates with targeted distribution by group.</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold mb-2">Payroll</h4>
+                    <p className="text-sm text-muted-foreground">Configurable salary structures, multiple payroll inputs, payslip generation and distribution (PDF/email), comprehensive payroll reporting, and bank transfer letters.</p>
+
+                    <h4 className="text-lg font-semibold mt-4 mb-2">Statutory Compliance</h4>
+                    <p className="text-sm text-muted-foreground">PF with ECR, ESI, Professional Tax (state rules), labour welfare fund handling, robust TDS computations, digitally signed Form 16 and Form 24Q generation, and bonus reporting.</p>
+
+                    <h4 className="text-lg font-semibold mt-4 mb-2">Leave Management</h4>
+                    <p className="text-sm text-muted-foreground">Supports multiple leave types, location-wise holiday lists, optional restricted holidays, multiple leave policies per group, and customizable leave policies per leave type.</p>
+                  </div>
+                </div>
+
+                <div className="mt-6 text-center">
+                  <Link to="/company/contact">
+                    <Button className="bg-gradient-to-br from-amber-400 to-yellow-400 text-slate-900 px-5 py-2 font-semibold">Get Popular Plan</Button>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="mt-12 max-w-4xl mx-auto text-center bg-background p-8 rounded-2xl border border-border">
+                <h3 className="text-2xl font-bold mb-4">Custom Pricing</h3>
+                <p className="text-muted-foreground mb-6">
+                  We tailor pricing to your organization's size and requirements. For a personalized quote,
+                  contact our sales team and we'll design a plan that fits your needs — whether you're a small
+                  business or an enterprise.
+                </p>
+                <div className="flex justify-center">
+                  <Link to="/company/contact">
+                    <Button size="lg" className="bg-gradient-to-br from-amber-400 to-yellow-400 text-slate-900 px-6 py-3 font-semibold">Contact Sales</Button>
+                  </Link>
+                </div>
+              </div>
 
           <div className="mt-20 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
@@ -156,9 +198,11 @@ const Pricing = () => {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Start your 14-day free trial today. No credit card required.
           </p>
-          <Button size="lg" variant="secondary">
-            Explore our services
-          </Button>
+          <Link to="/services">
+            <Button size="lg" variant="secondary">
+              Explore our services
+            </Button>
+          </Link>
         </div>
       </section>
 

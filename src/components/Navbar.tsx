@@ -112,8 +112,7 @@ export function Navbar() {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost">Sign In</Button>
+          <div className="hidden md:flex items-center">
             <Button className="bg-gradient-primary hover:shadow-hover transition-all">
               Get Started
             </Button>
@@ -177,10 +176,7 @@ export function Navbar() {
                 )}
               </div>
             ))}
-            <div className="mt-4 space-y-2">
-              <Button variant="outline" className="w-full">
-                Sign In
-              </Button>
+            <div className="mt-4">
               <Button className="w-full bg-gradient-primary">Get Started</Button>
             </div>
           </div>

@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import ITSolutions from "@/components/ITSolutions";
 import { Card, CardContent } from "@/components/ui/card";
 import { Clock, MapPin, Smartphone, Calendar, TrendingUp, UserCheck } from "lucide-react";
 
@@ -192,6 +193,8 @@ const TimeTracking = () => {
           </div>
         </div>
       </section>
+
+  <ITSolutions />
 
   <section className="py-20 bg-rose-800 text-white">
         <div className="container mx-auto px-4 text-center">

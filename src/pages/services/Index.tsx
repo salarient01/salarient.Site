@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 
@@ -99,8 +100,10 @@ const Services = () => {
       <section className="py-12">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to get started?</h2>
-          <p className="text-muted-foreground mb-6">Request a demo or contact our sales team to discuss a custom plan.</p>
-          <Button size="lg" className="bg-gradient-primary hover:shadow-hover transition-all">Request a Demo</Button>
+          <p className="text-muted-foreground mb-6">Learn more or contact our sales team to discuss a custom plan.</p>
+          <Link to="/features/automation">
+            <Button size="lg" className="bg-gradient-primary hover:shadow-hover transition-all">Learn more</Button>
+          </Link>
         </div>
       </section>
 

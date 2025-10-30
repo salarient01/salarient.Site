@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/Navbar";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
+import ServicesHighlight from "@/components/ServicesHighlight";
+import ITSolutions from "@/components/ITSolutions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, DollarSign, Calendar, Users, FileText, Shield } from "lucide-react";
@@ -160,6 +162,10 @@ const PayrollProcessing = () => {
           </div>
         </div>
       </section>
+
+  <ITSolutions />
+
+  <ServicesHighlight />
 
   <section className="py-20 bg-rose-800 text-white">
         <div className="container mx-auto px-4 text-center">

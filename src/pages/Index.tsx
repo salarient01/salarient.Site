@@ -26,18 +26,7 @@ const Index = () => {
     { icon: CheckCircle2, title: "Expert Support", description: "Get help when you need it with 24/7 phone, chat, and email support from certified payroll specialists.", link: "/company/contact" },
   ];
 
-  const heroStats = [
-    { value: "99.9%", label: "Uptime" },
-    { value: "50,000+", label: "Trusted customers" },
-    { value: "24/7", label: "Dedicated support" },
-  ];
 
-  const statsRow = [
-    { value: "50,000+", label: "Trusted Customers" },
-    { value: "99.9%", label: "Uptime" },
-    { value: "2M+", label: "Payrolls Processed" },
-    { value: "24/7", label: "Support" },
-  ];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -48,6 +37,9 @@ const Index = () => {
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -left-32 -top-32 w-96 h-96 rounded-full blur-3xl opacity-30 bg-gradient-to-br from-yellow-400 via-amber-400 to-orange-300 mix-blend-screen"></div>
           <div className="absolute right-0 bottom-0 w-[40rem] h-[40rem] rounded-full blur-2xl opacity-10 bg-gradient-to-tr from-indigo-900 to-slate-800"></div>
+          {/* Decorative payroll images */}
+          <img src="/images/payroll-doc.svg" alt="" aria-hidden="true" className="absolute left-8 top-12 w-36 opacity-20 blur-sm mix-blend-screen" />
+          <img src="/images/calculator.svg" alt="" aria-hidden="true" className="absolute right-20 top-24 w-28 opacity-15 blur-sm mix-blend-screen" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -57,7 +49,7 @@ const Index = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-extrabold tracking-tight leading-tight mb-6">
-              Elevate Payroll to a Luxurious Experience
+              Empowering Businesses with Intelligent Payroll management and IT Solutions
             </h1>
 
             <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
@@ -71,34 +63,51 @@ const Index = () => {
                 </Button>
               </Link>
 
-              <Button size="lg" variant="outline" className="text-white bg-white/5 border-white/20 hover:bg-white/10 px-8 py-4">
-                Request a Demo
-              </Button>
+              <Link to="/features/automation">
+                <Button size="lg" variant="outline" className="text-white bg-white/5 border-white/20 hover:bg-white/10 px-8 py-4">
+                  Learn more
+                </Button>
+              </Link>
             </div>
 
-            {/* hero stats */}
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {heroStats.map((s, i) => (
-                <div key={i} className="rounded-xl p-5 backdrop-blur-sm border border-white/8 bg-white/3">
-                  <div className="text-2xl font-bold mb-1 text-white">{s.value}</div>
-                  <div className="text-sm text-white/70">{s.label}</div>
-                </div>
-              ))}
-            </div>
+            {/* hero stats removed per request */}
           </div>
         </div>
       </section>
 
-      {/* Stats Row - neutralized */}
-      <section className="py-12 bg-[#070716]">
+      {/* Stats row removed per request */}
+
+      {/* Intro about Salarient - elevated copy (per request) */}
+      <section className="py-10 bg-[#050512]">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-4 gap-4 items-stretch">
-            {statsRow.map((stat, index) => (
-              <div key={index} className="flex flex-col items-center justify-center p-6 rounded-xl border border-white/8 bg-white/3">
-                <div className="text-2xl md:text-3xl font-extrabold mb-1 text-white">{stat.value}</div>
-                <div className="text-sm text-white/70">{stat.label}</div>
+          <div className="max-w-3xl mx-auto text-center mb-8">
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-medium">
+              Salarient is a global leader in payroll management and customer experience. We specialize in building strategic, personalized support solutions that help brands across industries increase satisfaction, accelerate growth, and operate more efficiently.
+            </p>
+            <div className="mt-6">
+              <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                <div className="p-4 rounded-lg bg-white/3 border border-white/6">
+                  <h4 className="font-semibold text-white">Customer Experience Management</h4>
+                  <p className="text-sm text-white/70 mt-2">Omnichannel customer support, VIP routing, and CX analytics to boost satisfaction and retention.</p>
+                </div>
+
+                <div className="p-4 rounded-lg bg-white/3 border border-white/6">
+                  <h4 className="font-semibold text-white">Back Office Processing</h4>
+                  <p className="text-sm text-white/70 mt-2">Payroll reconciliation, invoice processing, data entry and document workflows to streamline operations.</p>
+                </div>
+
+                <div className="p-4 rounded-lg bg-white/3 border border-white/6">
+                  <h4 className="font-semibold text-white">Trust &amp; Safety Solutions</h4>
+                  <p className="text-sm text-white/70 mt-2">Content moderation, fraud detection, and policy enforcement to protect your platform and users.</p>
+                </div>
+
+                <div className="p-4 rounded-lg bg-white/3 border border-white/6">
+                  <h4 className="font-semibold text-white">AI Services &amp; IT Solutions</h4>
+                  <p className="text-sm text-white/70 mt-2">Custom AI models, automation, integrations and managed IT services to accelerate innovation.</p>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -134,8 +143,12 @@ const Index = () => {
           <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto">Move to a platform that combines enterprise reliability with elegant design. Fast onboarding, transparent pricing, and dedicated support.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-br from-amber-400 to-yellow-400 text-slate-900 px-8 py-4 font-semibold shadow-[0_12px_40px_-10px_rgba(250,204,21,0.25)]">Explore our services</Button>
-            <Button size="lg" variant="outline" className="text-white bg-white/5 border-white/20 hover:bg-white/10 px-8 py-4">Request a Demo</Button>
+            <Link to="/services">
+              <Button size="lg" className="bg-gradient-to-br from-amber-400 to-yellow-400 text-slate-900 px-8 py-4 font-semibold shadow-[0_12px_40px_-10px_rgba(250,204,21,0.25)]">Explore our services</Button>
+            </Link>
+            <Link to="/features/automation">
+              <Button size="lg" variant="outline" className="text-white bg-white/5 border-white/20 hover:bg-white/10 px-8 py-4">Learn more</Button>
+            </Link>
           </div>
 
           <div className="mt-8 text-sm text-white/60">
