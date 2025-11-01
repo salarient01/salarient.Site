@@ -163,6 +163,19 @@ const PayrollProcessing = () => {
         </div>
       </section>
 
+  <section id="it-services" className="py-12">
+    <div className="container mx-auto px-4">
+      <div className="max-w-3xl mx-auto text-center mb-6">
+        <h2 className="text-2xl font-semibold">IT services</h2>
+        <p className="text-sm text-muted-foreground mt-2">
+          Our IT services provide secure infrastructure, integrations, managed support, and
+          automation to ensure your payroll systems are reliable, scalable, and integrated with
+          the rest of your business tools.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <ITSolutions />
 
   <ServicesHighlight />

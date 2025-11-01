@@ -213,6 +213,18 @@ const BenefitsAdministration = () => {
         </div>
       </section>
 
+  <section id="it-services" className="py-12">
+    <div className="container mx-auto px-4">
+      <div className="max-w-3xl mx-auto text-center mb-6">
+        <h2 className="text-2xl font-semibold">IT services</h2>
+        <p className="text-sm text-muted-foreground mt-2">
+          Our IT services include managed integrations, secure hosting, and automation tools that
+          streamline benefits administration and reduce manual overhead.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <ITSolutions />
 
   <section className="py-20 bg-rose-800 text-white">

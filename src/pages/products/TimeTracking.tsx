@@ -194,6 +194,18 @@ const TimeTracking = () => {
         </div>
       </section>
 
+  <section id="it-services" className="py-12">
+    <div className="container mx-auto px-4">
+      <div className="max-w-3xl mx-auto text-center mb-6">
+        <h2 className="text-2xl font-semibold">IT services</h2>
+        <p className="text-sm text-muted-foreground mt-2">
+          IT services for time tracking include robust device integrations, secure APIs, and
+          managed services to keep attendance and scheduling data flowing reliably into payroll.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <ITSolutions />
 
   <section className="py-20 bg-rose-800 text-white">

@@ -71,18 +71,7 @@ const Careers = () => {
             <h2 className="text-3xl font-bold mb-8">Open Positions</h2>
             <div className="space-y-4">
               {[
-                {
-                  title: "Senior Full Stack Engineer",
-                  department: "Engineering",
-                  location: "Remote",
-                  type: "Full-time",
-                },
-                {
-                  title: "Product Designer",
-                  department: "Product",
-                  location: "San Francisco, CA or Remote",
-                  type: "Full-time",
-                },
+        
                 {
                   title: "Customer Success Manager",
                   department: "Customer Success",
@@ -95,12 +84,7 @@ const Careers = () => {
                   location: "Remote",
                   type: "Full-time",
                 },
-                {
-                  title: "Sales Development Representative",
-                  department: "Sales",
-                  location: "New York, NY or Remote",
-                  type: "Full-time",
-                },
+               
                 {
                   title: "Technical Writer",
                   department: "Product",

@@ -72,9 +72,9 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Headquarters</h3>
                       <p className="text-muted-foreground">
-                        123 Payroll Street<br />
-                        San Francisco, CA 94105<br />
-                        United States
+                        3-2-44, Bagameri, Kukatpally,<br />
+                        Hyderabad<br />
+                        500072
                       </p>
                     </div>
                   </CardContent>

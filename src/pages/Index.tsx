@@ -49,7 +49,7 @@ const Index = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-extrabold tracking-tight leading-tight mb-6">
-              Empowering Businesses with Intelligent Payroll management and IT Solutions
+              Empowering Businesses with Intelligent Payroll management and IT Services
             </h1>
 
             <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
@@ -78,39 +78,68 @@ const Index = () => {
       {/* Stats row removed per request */}
 
       {/* Intro about Salarient - elevated copy (per request) */}
-      <section className="py-10 bg-[#050512]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-8">
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-medium">
-              Salarient is a global leader in payroll management and customer experience. We specialize in building strategic, personalized support solutions that help brands across industries increase satisfaction, accelerate growth, and operate more efficiently.
-            </p>
-            <div className="mt-6">
-              <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
-                <div className="p-4 rounded-lg bg-white/3 border border-white/6">
-                  <h4 className="font-semibold text-white">Customer Experience Management</h4>
-                  <p className="text-sm text-white/70 mt-2">Omnichannel customer support, VIP routing, and CX analytics to boost satisfaction and retention.</p>
-                </div>
+      <section className="py-16 bg-[#050512]">
+  <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-10">
+    
+    {/* --- Text Content --- */}
+    <div className="flex-1 text-center md:text-left">
+      <p className="text-xl md:text-2xl text-white/80 leading-relaxed font-medium mb-8">
+        Salarient is a global leader in payroll management and customer experience. 
+        We specialize in building strategic, personalized support solutions that help brands 
+        across industries increase satisfaction, accelerate growth, and operate more efficiently.
+      </p>
 
-                <div className="p-4 rounded-lg bg-white/3 border border-white/6">
-                  <h4 className="font-semibold text-white">Back Office Processing</h4>
-                  <p className="text-sm text-white/70 mt-2">Payroll reconciliation, invoice processing, data entry and document workflows to streamline operations.</p>
-                </div>
-
-                <div className="p-4 rounded-lg bg-white/3 border border-white/6">
-                  <h4 className="font-semibold text-white">Trust &amp; Safety Solutions</h4>
-                  <p className="text-sm text-white/70 mt-2">Content moderation, fraud detection, and policy enforcement to protect your platform and users.</p>
-                </div>
-
-                <div className="p-4 rounded-lg bg-white/3 border border-white/6">
-                  <h4 className="font-semibold text-white">AI Services &amp; IT Solutions</h4>
-                  <p className="text-sm text-white/70 mt-2">Custom AI models, automation, integrations and managed IT services to accelerate innovation.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="p-4 rounded-lg bg-white/5 border border-white/10">
+          <h4 className="text-lg md:text-xl font-semibold text-white">
+            Customer Experience Management
+          </h4>
+          <p className="text-base md:text-lg text-white/70 mt-2">
+            Omnichannel customer support, VIP routing, and CX analytics to boost satisfaction and retention.
+          </p>
         </div>
-      </section>
+
+        <div className="p-4 rounded-lg bg-white/5 border border-white/10">
+          <h4 className="text-lg md:text-xl font-semibold text-white">
+            Back Office Processing
+          </h4>
+          <p className="text-base md:text-lg text-white/70 mt-2">
+            Payroll reconciliation, invoice processing, data entry and document workflows to streamline operations.
+          </p>
+        </div>
+
+        <div className="p-4 rounded-lg bg-white/5 border border-white/10">
+          <h4 className="text-lg md:text-xl font-semibold text-white">
+            Trust &amp; Safety Solutions
+          </h4>
+          <p className="text-base md:text-lg text-white/70 mt-2">
+            Content moderation, fraud detection, and policy enforcement to protect your platform and users.
+          </p>
+        </div>
+
+        <div className="p-4 rounded-lg bg-white/5 border border-white/10">
+          <h4 className="text-lg md:text-xl font-semibold text-white">
+            AI &amp; IT Services
+          </h4>
+          <p className="text-base md:text-lg text-white/70 mt-2">
+            Custom AI models, automation, integrations and managed IT services to accelerate innovation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* --- Side Image --- */}
+    <div className="flex-1 flex justify-center">
+      <img
+        src="/sr.jpg"
+        alt="Salarient team workspace"
+        className="w-full max-w-md rounded-2xl shadow-lg shadow-cyan-500/20 object-cover hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+  </div>
+</section>
+
 
       {/* Features Section - neutralized colors */}
       <section className="py-20 bg-[#050512]">

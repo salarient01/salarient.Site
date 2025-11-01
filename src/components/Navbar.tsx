@@ -64,11 +64,38 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-lg bg-gradient-primary" />
-            <span className="text-xl font-bold text-foreground">SALARIENT HR solutions</span>
-          </Link>
+        <div className="flex h-20 md:h-24 items-center justify-between">
+          {/* logo / wordmark */}
+          {/* Use the provided raster logo directly */}
+      <div className="flex flex-col items-center leading-none">
+  <Link
+    to="/"
+    className="flex items-center" // move whole group right slightly if needed
+    aria-label="Home"
+  >
+    <img
+      src="/logo.svg"
+      alt="SALARIENT logo"
+      className="h-14 md:h-16 w-auto transform translate-x-4"
+    />
+  </Link>
+  <p
+    className="text-xs md:text-sm font-medium -mt-1 text-center transform translate-x-5 -translate-y-2"
+    style={{ fontFamily: 'Futura, "Futura PT", "Futura Std", "Trebuchet MS", Arial, sans-serif', fontWeight: 200 }}
+  >
+    Payroll management &
+  </p>
+  <p
+    className="text-xs md:text-sm font-medium -mt-1 text-center transform translate-x-5 -translate-y-2"
+    style={{ fontFamily: 'Futura, "Futura PT", "Futura Std", "Trebuchet MS", Arial, sans-serif', fontWeight: 200 }}
+  >
+    IT services
+  </p>
+</div>
+
+
+
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
@@ -113,9 +140,11 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center">
-            <Button className="bg-gradient-primary hover:shadow-hover transition-all">
-              Get Started
-            </Button>
+            <Link to="/company/contact">
+              <Button className="bg-gradient-primary hover:shadow-hover transition-all">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -177,7 +206,9 @@ export function Navbar() {
               </div>
             ))}
             <div className="mt-4">
-              <Button className="w-full bg-gradient-primary">Get Started</Button>
+              <Link to="/company/contact" onClick={() => setMobileMenuOpen(false)}>
+                <Button className="w-full bg-gradient-primary">Get Started</Button>
+              </Link>
             </div>
           </div>
         )}

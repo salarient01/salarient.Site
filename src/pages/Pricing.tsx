@@ -105,6 +105,23 @@ const Pricing = () => {
                     <Button className="bg-gradient-to-br from-amber-400 to-yellow-400 text-slate-900 px-5 py-2 font-semibold">Get Premium Plan</Button>
                   </Link>
                 </div>
+                
+                <div className="mt-6">
+                  <h4 className="text-lg font-semibold mb-2">Employee onboarding</h4>
+                  <p className="text-sm text-muted-foreground mb-3">Onboarding of employees, workflows for admin review, alerts and reminders for employees and admins, and electronic acceptance of company policy.</p>
+
+                  <h4 className="text-lg font-semibold mt-4 mb-2">Help desk</h4>
+                  <p className="text-sm text-muted-foreground mb-3">Define ticket categories, create & resolve tickets, SLA-driven queues and escalation, and reporting to ensure timely response and operational continuity.</p>
+
+                  <h4 className="text-lg font-semibold mt-4 mb-2">Employee travel expense management</h4>
+                  <p className="text-sm text-muted-foreground mb-3">Set eligibility grade-wise, request advances, single-click upload of receipts, streamline approvals and reimbursements.</p>
+
+                  <h4 className="text-lg font-semibold mt-4 mb-2">Applicant tracking system</h4>
+                  <p className="text-sm text-muted-foreground mb-3">Requisition management, resume bank, interview scheduling, interviewer review tracking, and offer letter generation.</p>
+
+                  <h4 className="text-lg font-semibold mt-4 mb-2">Performance management</h4>
+                  <p className="text-sm text-muted-foreground">Objectives & goal management, competencies management, appraisal workflows, and 360-degree reviews.</p>
+                </div>
               </div>
 
               {/* Popular Plan section */}
@@ -142,6 +159,20 @@ const Pricing = () => {
                   <Link to="/company/contact">
                     <Button className="bg-gradient-to-br from-amber-400 to-yellow-400 text-slate-900 px-5 py-2 font-semibold">Get Popular Plan</Button>
                   </Link>
+                </div>
+                
+                <div className="mt-6">
+                  <h4 className="text-lg font-semibold mb-2">Attendance tracking</h4>
+                  <p className="text-sm text-muted-foreground mb-3">Real-time integration with biometric or any attendance capturing device, support for multiple shifts, easy shift rostering by line managers for their teams, penalties for unauthorized absence / late-in / early-out / shortfall, flexi-hours support, and selfie attendance marking.</p>
+
+                  <h4 className="text-lg font-semibold mt-4 mb-2">Exit management</h4>
+                  <p className="text-sm text-muted-foreground mb-3">Online resignation application & approval, customizable multi-department clearance workflows, an exit dashboard for visibility, and integration with full-final settlement processes.</p>
+
+                  <h4 className="text-lg font-semibold mt-4 mb-2">Employee onboarding</h4>
+                  <p className="text-sm text-muted-foreground mb-3">Streamlined onboarding workflows, admin review steps, alerts and reminders for employees and admins, and electronic acceptance of company policies to ensure a fast, compliant new-hire experience.</p>
+
+                  <h4 className="text-lg font-semibold mt-4 mb-2">Help desk</h4>
+                  <p className="text-sm text-muted-foreground">Define ticket categories, create & resolve tickets, SLA-driven queues and escalation, and reporting to ensure timely response and operational continuity.</p>
                 </div>
               </div>
 

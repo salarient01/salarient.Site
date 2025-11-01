@@ -2,17 +2,22 @@ import React from "react";
 import { ArrowRight, Cloud, ServerCog, GitPullRequest, ShieldCheck, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function ITSolutions() {
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+export default function ITSolutions({ title = "IT Solutions", description }: Props) {
+  const desc =
+    description ||
+    `Our IT Solutions complement every product we offer — from secure infrastructure and integrations to managed services and AI-powered automation. We build reliable, production-ready systems so your HR and payroll platforms scale securely.`;
+
   return (
     <section className="py-16 bg-background text-foreground">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">IT Solutions</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Our IT Solutions complement every product we offer — from secure infrastructure
-            and integrations to managed services and AI-powered automation. We build reliable,
-            production-ready systems so your HR and payroll platforms scale securely.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">{title}</h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{desc}</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">

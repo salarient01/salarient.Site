@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Linkedin, Mail, Instagram } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Mail, Instagram, Headphones, FileText, ShieldCheck, Cpu } from "lucide-react";
 
 export function Footer() {
   return (
@@ -20,6 +20,42 @@ export function Footer() {
             <p className="text-white/60 mb-4 max-w-md">
               Simplifying payroll and HR management for businesses of all sizes. Trusted by thousands of companies worldwide.
             </p>
+
+            {/* Elevated Services mini-section */}
+            <div className="mb-6 p-4 rounded-lg bg-gradient-to-br from-[#07060a]/40 to-transparent border border-amber-500/10">
+              <h4 className="text-lg font-semibold text-white mb-2">Services</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/70">
+                <div className="flex items-start gap-3">
+                  <Headphones className="h-5 w-5 text-amber-400 mt-0.5" />
+                  <div>
+                    <div className="font-medium text-white">Customer Experience</div>
+                    <div className="text-xs">Omnichannel support, VIP routing, and CX analytics.</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <FileText className="h-5 w-5 text-amber-400 mt-0.5" />
+                  <div>
+                    <div className="font-medium text-white">Back Office</div>
+                    <div className="text-xs">Payroll reconciliation, invoice processing, and workflows.</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <ShieldCheck className="h-5 w-5 text-amber-400 mt-0.5" />
+                  <div>
+                    <div className="font-medium text-white">Trust & Safety</div>
+                    <div className="text-xs">Content moderation, fraud detection, and policy enforcement.</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Cpu className="h-5 w-5 text-amber-400 mt-0.5" />
+                  <div>
+                    <div className="font-medium text-white">AI & IT</div>
+                    <div className="text-xs">Custom AI, automation, integrations and managed services.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="flex space-x-4">
               <a href="#" className="text-white/60 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
@@ -27,13 +63,13 @@ export function Footer() {
               <a href="https://www.instagram.com/salarient_hr_solutions?igsh=MXE1d24xY2dsdHZodw==" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="https://x.com/salarient25?s=21" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
               <a href="https://www.linkedin.com/in/salarient-hr-software-solutions-967405379?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors">
+              <a href="mailto:salarienthrsolutions@outlook.com" className="text-white/60 hover:text-white transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
