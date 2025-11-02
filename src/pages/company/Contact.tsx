@@ -6,8 +6,56 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
+  const [phone, setPhone] = useState("");
+  const [messageText, setMessageText] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // minimal validation
+    if (!name.trim() || !messageText.trim()) {
+      alert("Please provide your name and a message before sending.");
+      return;
+    }
+
+    const text = `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nPhone: ${phone}\nMessage: ${messageText}`;
+    const phoneNumber = "916281576979"; // +91 6281576979 (no +)
+
+    // Build both forms of the WhatsApp URL. Some environments prefer wa.me, others api.whatsapp.com
+    const apiUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(text)}`;
+    const waMeUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+
+    // Log the URLs for debugging (check browser console)
+    // eslint-disable-next-line no-console
+    console.log("WhatsApp URLs:", { apiUrl, waMeUrl });
+
+    // Try opening api.whatsapp first, then fall back to wa.me. If window.open is blocked, show the URL so user can copy/paste.
+    const opened = window.open(apiUrl, "_blank", "noopener,noreferrer");
+    if (opened === null) {
+      // popup blocked or failed — try wa.me
+      const opened2 = window.open(waMeUrl, "_blank", "noopener,noreferrer");
+      if (opened2 === null) {
+        // still blocked — provide manual fallback
+        const fallback = waMeUrl;
+        try {
+          // try to copy to clipboard for convenience
+          navigator.clipboard.writeText(fallback).then(() => {
+            alert("Popup blocked. WhatsApp link copied to clipboard. Paste it into your browser to continue:\n" + fallback);
+          }).catch(() => {
+            alert("Popup blocked. Please open this link in your browser to continue:\n" + fallback);
+          });
+        } catch (err) {
+          alert("Popup blocked. Please open this link in your browser to continue:\n" + fallback);
+        }
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-teal-900 text-white">
       <Navbar />
@@ -125,32 +173,37 @@ const Contact = () => {
         <Card>
           <CardContent className="p-8 bg-background text-foreground">
                   <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-                  <form className="space-y-6">
+                  <form className="space-y-6" onSubmit={handleSubmit}>
                     <div>
                       <label className="block text-sm font-medium mb-2">Name</label>
-                      <Input placeholder="Your name" />
+                      <Input placeholder="Your name" value={name} onChange={(e: any) => setName(e.target.value)} />
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">Email</label>
-                      <Input type="email" placeholder="your@email.com" />
+                      <Input type="email" placeholder="your@email.com" value={email} onChange={(e: any) => setEmail(e.target.value)} />
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">Company</label>
-                      <Input placeholder="Your company name" />
+                      <Input placeholder="Your company name" value={company} onChange={(e: any) => setCompany(e.target.value)} />
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">Phone (Optional)</label>
-                      <Input type="tel" placeholder="Your phone number" />
+                      <Input type="tel" placeholder="Your phone number" value={phone} onChange={(e: any) => setPhone(e.target.value)} />
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">Message</label>
                       <Textarea 
                         placeholder="How can we help you?" 
                         rows={6}
+                        value={messageText}
+                        onChange={(e: any) => setMessageText(e.target.value)}
                       />
                     </div>
-                    <Button className="w-full bg-gradient-primary hover:shadow-hover transition-all">
-                      Send Message
+                    <Button
+                      type="submit"
+                      className="w-full bg-gradient-primary hover:shadow-hover transition-all"
+                    >
+                      Send Message via WhatsApp
                     </Button>
                   </form>
                 </CardContent>

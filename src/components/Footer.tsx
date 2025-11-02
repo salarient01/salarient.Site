@@ -8,8 +8,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="h-10 w-10 rounded-full bg-gradient-to-br from-amber-400 to-yellow-300 shadow-[0_8px_30px_-12px_rgba(250,204,21,0.35)] flex items-center justify-center">
-                <span className="text-[#1f1b0d] font-bold">S</span>
+              <div className="h-10 w-10 flex items-center justify-center">
+                <img src="/images/logo-mark.svg" alt="SALARIENT mark" className="h-10 w-10 object-contain" />
               </div>
               <div>
                 <div className="text-xl font-semibold">SALARIENT HR solutions</div>

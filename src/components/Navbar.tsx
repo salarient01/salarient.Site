@@ -68,26 +68,47 @@ export function Navbar() {
           {/* logo / wordmark */}
           {/* Use the provided raster logo directly */}
       <div className="flex flex-col items-center leading-none">
+  {/* Logo + Brand Name */}
   <Link
     to="/"
-    className="flex items-center" // move whole group right slightly if needed
+    className="flex items-center space-x-2 transform translate-x-4"
     aria-label="Home"
   >
     <img
       src="/logo.svg"
       alt="SALARIENT logo"
-      className="h-14 md:h-16 w-auto transform translate-x-4"
+      className="h-12 md:h-14 w-auto object-contain"
     />
+    <span
+  className="text-xl md:text-2xl font-extrabold tracking-wider text-blue-700 drop-shadow-sm uppercase"
+      style={{
+        fontFamily:
+          'Futura, "Futura PT", "Futura Std", "Trebuchet MS", Arial, sans-serif',
+        letterSpacing: "0.08em",
+      }}
+    >
+      SALARIENT
+    </span>
   </Link>
+
+  {/* Subtitles */}
   <p
-    className="text-xs md:text-sm font-medium -mt-1 text-center transform translate-x-5 -translate-y-2"
-    style={{ fontFamily: 'Futura, "Futura PT", "Futura Std", "Trebuchet MS", Arial, sans-serif', fontWeight: 200 }}
+    className="text-xs md:text-sm font-medium text-center transform -translate-y-1"
+    style={{
+      fontFamily:
+        'Futura, "Futura PT", "Futura Std", "Trebuchet MS", Arial, sans-serif',
+      fontWeight: 200,
+    }}
   >
     Payroll management &
   </p>
   <p
-    className="text-xs md:text-sm font-medium -mt-1 text-center transform translate-x-5 -translate-y-2"
-    style={{ fontFamily: 'Futura, "Futura PT", "Futura Std", "Trebuchet MS", Arial, sans-serif', fontWeight: 200 }}
+    className="text-xs md:text-sm font-medium text-center transform -translate-y-2"
+    style={{
+      fontFamily:
+        'Futura, "Futura PT", "Futura Std", "Trebuchet MS", Arial, sans-serif',
+      fontWeight: 200,
+    }}
   >
     IT services
   </p>
